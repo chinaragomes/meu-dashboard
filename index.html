@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard de Notificações</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="dark">
+  <header>
+    <h1>Dashboard de Notificações</h1>
+    <div class="notification-container">
+      <button id="notification-btn" onclick="toggleNotificationPanel()">
+        <span id="notification-dot" style="display:none"></span>
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 23a2.883 2.883 0 0 0 2.9503-2h-5.9006A2.883 2.883 0 0 0 12 23Zm9.4536-6.287-1.7257-1.654V11a7.0031 7.0031 0 0 0-5.25-6.797V3a1.5 1.5 0 0 0-3 0v1.203A7.0034 7.0034 0 0 0 4.2721 11v4.059l-1.7256 1.654A1.0006 1.0006 0 0 0 3.0017 18h17.9966a.9998.9998 0 0 0 .6676-1.287Z" fill="#FFF"/></svg>
+      </button>
+      <div class="notification-panel" id="notification-panel">
+        <div class="notification-title">Atualizações</div>
+        <ul id="notification-content"></ul>
+      </div>
+    </div>
+  </header>
+
+  <section class="filters" id="filters-section"></section>
+
+  <section class="stats">
+    <div class="stat">✅ Respostas: <span id="respostas-ok">0%</span></div>
+    <div class="stat">📭 Não Respondidas: <span id="respostas-vazias">0%</span></div>
+    <div class="stat">📤 Enviadas: <span id="status-enviado">0%</span></div>
+    <div class="stat">❌ Falhou: <span id="status-falhou">0%</span></div>
+  </section>
+
+  <section class="content" id="dados"></section>
+
+  <!-- Mensagem (feedback do webhook) -->
+  <div id="popup-msg" style="display:none"></div>
+
+  <footer>
+    <div>
+      &copy; <span id="currentYear"></span> Espaço Bem Estar Chinara Gomes | 
+      <a href="https://wa.me/558688073377" target="_blank">Desenvolvido por Artur Neto</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
