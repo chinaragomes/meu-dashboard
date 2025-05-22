@@ -1,6 +1,6 @@
 const apiUrl = "https://api.baserow.io/api/database/rows/table/487909/?user_field_names=true";
 const token = "GdJw5jXKGaLpqqizFpNxHxOUpsTNI0sK";
-const webhookUrl = "https://n8n.chinaragomes.com/webhook/reenvia-notificacao";
+const webhookUrl = "https://n8n-webhook.chinaragomes.com/webhook/reenvia-notificacao";
 
 let dadosOriginais = [];
 let oldDados = [];
